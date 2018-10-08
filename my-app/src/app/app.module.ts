@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { ArtistComponent } from './components/artist/artist.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { TracksComponent } from './components/tracks/tracks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArtistComponent
+    ArtistComponent,
+    TracksComponent
   ],
   imports: [
     BrowserModule,
