@@ -1,5 +1,0 @@
-<div class="card" style="width: 18rem;">
-    <ul *ngFor="let track of canciones; let i=index;"class="list-group list-group-flush">
-      <li class="list-group-item">{{ track.name }}<button (click)="add(i)">like</button><button (click)="less(i, track.votes)">dislike</button><span>{{track.votes}}</span></li>
-    </ul>
-  </div>

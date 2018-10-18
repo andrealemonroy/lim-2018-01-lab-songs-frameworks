@@ -8,10 +8,8 @@ import { ApiService } from './service/api.service';
 })
 export class AppComponent {
   title = 'my-app';
-  artists = [{ name: 'eminem' }];
-    // { name: 'Kanye+West' },
-
-    // { name: 'Artict+Monkeys' }];
+  artists = [{ name: 'eminem' }, { name: 'Kanye+West' }, { name: 'Artict+Monkeys' }
+];
   position = 0;
   artist: any;
   songs = [];
