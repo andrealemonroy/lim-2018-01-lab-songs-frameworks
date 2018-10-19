@@ -14,7 +14,7 @@ export class ApiService {
 
   getCanciones(name) {
     // tslint:disable-next-line:max-line-length
-    return this.http.get(`http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${name}&api_key=1d2f26286c0cebdf680d54cb5dda654d&limit=10&format=json`)
+    return this.http.get(`https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${name}&api_key=1d2f26286c0cebdf680d54cb5dda654d&limit=10&format=json`)
       .pipe(map(data => {
         this.artist['name'] = data['toptracks']['@attr'].artist,
           this.artist['img'] = data['toptracks'].track[0].image[2]['#text'];

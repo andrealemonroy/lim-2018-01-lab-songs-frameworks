@@ -16,6 +16,7 @@ export class AppComponent {
   constructor(private _apiService: ApiService) {
     const name = this.artists[this.position].name;
     this._apiService.getCanciones(name).subscribe(gf => {
+      // console.log(gf);
       this.artist = {
         name: gf['name'],
         img: gf['img']
