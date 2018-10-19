@@ -1,2 +1,2 @@
-<app-artist [artistas]="artist"></app-artist>
-<app-tracks [canciones]="songs" (cancionesconvotosmodificadas)="songs = $event" (songsModified)="songs = $event"></app-tracks>
+<app-artist [artista]="artist" (next)="afterArtist()" (last)="beforeArtist()"></app-artist>
+<app-tracks [canciones]="songs"  (cancionesconvotosmodificadas)="songs = $event" (songsModified)="songs = $event"></app-tracks>

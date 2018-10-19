@@ -8,25 +8,44 @@ import { ApiService } from './service/api.service';
 })
 export class AppComponent {
   title = 'my-app';
-  artists = [{ name: 'eminem' }, { name: 'Kanye+West' }, { name: 'Artict+Monkeys' }
-];
+  artists = [{ name: 'Dua+Lipa' }, { name: 'Justin+Bieber' }, { name: 'Artict+Monkeys' }, { name: 'Taylor+Swift' }, { name: 'Rihanna' }
+  ];
   position = 0;
   artist: any;
   songs = [];
   constructor(private _apiService: ApiService) {
-    const name = this.artists[this.position].name;
-    this._apiService.getCanciones(name).subscribe(gf => {
-      // console.log(gf);
+    this.dataArtist(this.position);
+  }
+  afterArtist() {
+    if (this.position === 4) {
+      this.position = 0;
+      this.dataArtist(this.position);
+    } else {
+      this.position++;
+      this.dataArtist(this.position);
+    }
+  }
+  beforeArtist() {
+    if (this.position === 0) {
+      this.position = 0;
+      this.dataArtist(this.position);
+    } else {
+      this.position--;
+      this.dataArtist(this.position);
+    }
+}
+  dataArtist(index) {
+    const nameArtist = this.artists[index].name;
+    this._apiService.getCanciones(nameArtist).subscribe(nextArtist => {
       this.artist = {
-        name: gf['name'],
-        img: gf['img']
+        name: nextArtist['name'],
+        img: nextArtist['img']
       };
-      this.songs = gf['songs'];
-      console.log(this.songs);
+      this.songs = nextArtist['songs'];
     });
   }
 
-  // getArtist(name) {
-  //   this._apiService.getTracks(name);
-  // }
+
+
+
 }

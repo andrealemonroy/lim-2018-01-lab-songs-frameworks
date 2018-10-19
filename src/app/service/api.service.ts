@@ -36,7 +36,7 @@ export class ApiService {
   dislike(id) {
     this.artist['songs'] = this.artist['songs'].map((cancion) => {
       if (cancion.id === id) {
-        return { ...cancion, votes: cancion.votes - 1};
+        return { ...cancion, votes: cancion.votes - 1 };
       }
       return cancion;
     });
