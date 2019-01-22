@@ -1,8 +1,8 @@
-<button class="btn btn primary" (click)="before()">antes</button>
-      <img [src]="artista.img"><br>
-      <strong>{{ artista.name }}</strong>
-
-      <!-- <img [src]="list[1].image[2]['#text']">
-      <strong>{{ list[1].name }}</strong> -->
- 
-<button type="button" class="btn btn primary" (click)="after()">después</button>
+<div style="height:100%;">
+      <div class="d-flex justify-content-center"> 
+            <button style="height:30vh;" class="btn btn primary" (click)="before()">antes</button>
+            <img style="height:30vh;" [src]="artista.img"><br>
+            <button style="height:30vh;" type="button" class="btn btn primary" (click)="after()">después</button>
+      </div>
+      <div style="height:20%;"><strong>{{ artista.name }}</strong></div>
+</div>

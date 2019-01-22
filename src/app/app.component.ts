@@ -27,7 +27,7 @@ export class AppComponent {
   }
   beforeArtist() {
     if (this.position === 0) {
-      this.position = 0;
+      this.position = 4;
       this.dataArtist(this.position);
     } else {
       this.position--;
@@ -44,8 +44,4 @@ export class AppComponent {
       this.songs = nextArtist['songs'];
     });
   }
-
-
-
-
 }
